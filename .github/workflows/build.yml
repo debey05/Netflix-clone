@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build and Analyze
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
 
     steps:
       # Checkout the repository
@@ -22,7 +22,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         with:
           args: >
-            -Dsonar.projectKey=sonar.projectKey=Netflix-clone
+            -Dsonar.projectKey=Netflix-clone
             -Dsonar.projectName="Netflix-clone"
             -Dsonar.sources=.
         env:
